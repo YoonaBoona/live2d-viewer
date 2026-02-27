@@ -1,0 +1,29 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "Matsuri_VTuber.moc3",
+		"Textures": [
+			"Matsuri_VTuber.4096/texture_00.png",
+			"Matsuri_VTuber.4096/texture_01.png",
+			"Matsuri_VTuber.4096/texture_02.png",
+			"Matsuri_VTuber.4096/texture_03.png"
+		],
+		"Physics": "Matsuri_VTuber.physics3.json",
+		"DisplayInfo": "Matsuri_VTuber.cdi3.json"
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": [
+				"ParamEyeLOpen",
+				"ParamEyeROpen"
+			]
+		},
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		}
+	]
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Live2D Viewer</title>
+
+<script src="https://unpkg.com/pixi.js@6.x/dist/browser/pixi.min.js"></script>
+<script src="https://unpkg.com/pixi-live2d-display/dist/index.min.js"></script>
+
+<style>
+body { margin:0; overflow:hidden; background:transparent; }
+canvas { width:100vw; height:100vh; }
+</style>
+</head>
+
+<body>
+<script>
+const app = new PIXI.Application({
+    resizeTo: window,
+    backgroundAlpha: 0
+});
+
+document.body.appendChild(app.view);
+
+PIXI.live2d.Live2DModel.from("./model/Matsuri_VTuber.model3.json")
+.then(model => {
+
+    app.stage.addChild(model);
+
+    model.scale.set(0.4);
+    model.x = window.innerWidth / 2;
+    model.y = window.innerHeight / 1.2;
+
+    model.anchor.set(0.5, 1);
+});
+</script>
+</body>
+</html>
