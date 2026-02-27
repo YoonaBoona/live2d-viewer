@@ -4,8 +4,11 @@
 <meta charset="UTF-8">
 <title>Live2D Viewer</title>
 
+<!-- PixiJS -->
 <script src="https://unpkg.com/pixi.js@6.x/dist/browser/pixi.min.js"></script>
-<script src="https://unpkg.com/pixi-live2d-display/dist/index.min.js"></script>
+
+<!-- Live2D SDK -->
+<script src="https://unpkg.com/@pixi/live2d-display/dist/pixi-live2d-display.min.js"></script>
 
 <style>
 body { margin:0; overflow:hidden; background:transparent; }
@@ -22,9 +25,9 @@ const app = new PIXI.Application({
 
 document.body.appendChild(app.view);
 
+// Replace YOURMODEL.model3.json with your actual file name
 PIXI.live2d.Live2DModel.from("./model/Matsuri_VTuber.model3.json")
 .then(model => {
-
     app.stage.addChild(model);
 
     model.scale.set(0.4);
